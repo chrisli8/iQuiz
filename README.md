@@ -2,6 +2,8 @@
 
 Christopher Li, INFO 449, iQuiz
 
+This is a iOS app that allows users to select a topic of their choosing and quiz themselves.
+
 Basic functionality:
 
 TableView appears with nonempty cells
