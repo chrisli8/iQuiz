@@ -1,1 +1,11 @@
 # iQuiz
+
+Christopher Li, INFO 449, iQuiz
+
+Basic functionality:
+
+TableView appears with nonempty cells
+TableView has the right number of cells
+TableCells have the right data
+TableCells display icons and subtext
+Settings alert
