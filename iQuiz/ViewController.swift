@@ -9,6 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var Answer1: UIButton!
+    @IBOutlet weak var Answer2: UIButton!
+    @IBOutlet weak var Answer3: UIButton!
+    @IBOutlet weak var Answer4: UIButton!
+    var selectedAnswer: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +25,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func onAnswerButtonPressed(_ sender: UIButton) {
+        Answer1.isSelected = false
+        Answer2.isSelected = false
+        Answer3.isSelected = false
+        Answer4.isSelected = false
+        sender.isSelected = !sender.isSelected
+        self.selectedAnswer = sender
+    }
 
 }
 
