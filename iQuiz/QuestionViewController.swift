@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class QuestionViewController: UIViewController {
     @IBOutlet weak var Answer1: UIButton!
     @IBOutlet weak var Answer2: UIButton!
     @IBOutlet weak var Answer3: UIButton!

@@ -83,10 +83,10 @@
             </objects>
             <point key="canvasLocation" x="-807" y="529"/>
         </scene>
-        <!--View Controller-->
+        <!--Question View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="questionVCid" id="BYZ-38-t0r" customClass="QuestionViewController" customModule="iQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -101,7 +101,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
-                                    <segue destination="TfF-cq-oVp" kind="show" id="h2t-aR-KkT"/>
+                                    <segue destination="TfF-cq-oVp" kind="show" id="N4N-gH-vak"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz Topic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XV8-Cz-7Li">
@@ -118,7 +118,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gO3-g9-IYr">
-                                <rect key="frame" x="16" y="230" width="343" height="30"/>
+                                <rect key="frame" x="16" y="229.5" width="343" height="30"/>
                                 <color key="backgroundColor" red="0.058193182687142499" green="0.59222694731437664" blue="0.90042067307692308" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Answer 1">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -131,7 +131,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G04-tC-7YU">
-                                <rect key="frame" x="16" y="268" width="343" height="30"/>
+                                <rect key="frame" x="16" y="267.5" width="343" height="30"/>
                                 <color key="backgroundColor" red="0.058193182689999998" green="0.59222694730000003" blue="0.90042067309999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Answer 2">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -144,7 +144,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRd-he-zQr">
-                                <rect key="frame" x="16" y="306" width="343" height="30"/>
+                                <rect key="frame" x="16" y="305.5" width="343" height="30"/>
                                 <color key="backgroundColor" red="0.058193182689999998" green="0.59222694730000003" blue="0.90042067309999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Answer 3">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -157,7 +157,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8OS-8g-iXc">
-                                <rect key="frame" x="16" y="344" width="343" height="30"/>
+                                <rect key="frame" x="16" y="343.5" width="343" height="30"/>
                                 <color key="backgroundColor" red="0.058193182689999998" green="0.59222694730000003" blue="0.90042067309999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Answer 4">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -212,10 +212,10 @@
             </objects>
             <point key="canvasLocation" x="992.79999999999995" y="527.58620689655174"/>
         </scene>
-        <!--View Controller-->
+        <!--Answer View Controller-->
         <scene sceneID="fFZ-0c-sl9">
             <objects>
-                <viewController id="TfF-cq-oVp" sceneMemberID="viewController">
+                <viewController id="TfF-cq-oVp" customClass="AnswerViewController" customModule="iQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TYI-7h-3e8"/>
                         <viewControllerLayoutGuide type="bottom" id="KHq-iG-esZ"/>
@@ -245,6 +245,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="DlJ-tJ-C5n" firstAttribute="centerY" secondItem="ihE-24-FiF" secondAttribute="centerY" id="97j-D7-9lX"/>
                             <constraint firstItem="09I-FJ-Lex" firstAttribute="top" secondItem="Pji-9J-MNl" secondAttribute="bottom" constant="15" id="EA4-OF-xpS"/>
@@ -254,11 +255,25 @@
                             <constraint firstItem="Pji-9J-MNl" firstAttribute="top" secondItem="TYI-7h-3e8" secondAttribute="bottom" constant="64" id="eAY-gH-cbi"/>
                             <constraint firstItem="Pji-9J-MNl" firstAttribute="centerX" secondItem="ihE-24-FiF" secondAttribute="centerX" id="t6S-Wc-Fhj"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="kte-HQ-GJA" appends="YES" id="FEh-L2-cvt"/>
+                            <outletCollection property="gestureRecognizers" destination="4fJ-NX-poZ" appends="YES" id="H9v-01-mwW"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cc1-7D-pSD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="kte-HQ-GJA">
+                    <connections>
+                        <action selector="onSwipeAction:" destination="TfF-cq-oVp" id="FwY-X0-BAi"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="4fJ-NX-poZ">
+                    <connections>
+                        <action selector="onSwipeAction:" destination="TfF-cq-oVp" id="ZWz-1R-59Y"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1673" y="528"/>
+            <point key="canvasLocation" x="1826" y="528"/>
         </scene>
     </scenes>
 </document>
