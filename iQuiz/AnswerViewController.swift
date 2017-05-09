@@ -25,13 +25,15 @@ class AnswerViewController: UIViewController {
     
     @IBAction func onSwipeAction(_ sender: UISwipeGestureRecognizer) {
         if sender.direction == UISwipeGestureRecognizerDirection.right {
+            // OLD CODE FOR SEGUE
             // identifier has to match storyboard id
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "questionVCid") as! QuestionViewController
-            // vc.transitioningDelegate = self.transitionManager
-            self.present(vc, animated: true, completion: nil)
+//            let vc = self.storyboard?.instantiateViewController(withIdentifier: "questionVCid") as! QuestionViewController
+//            vc.transitioningDelegate = self.transitionManager
+//            self.present(vc, animated: true, completion: nil)
+            performSegue(withIdentifier: "aToQ", sender: nil)
             print("swipe right")
             
-        } else if sender.direction == UISwipeGestureRecognizerDirection.right {
+        } else if sender.direction == UISwipeGestureRecognizerDirection.left {
             print("swipe left")
         } else {
             print("not recognized")

@@ -101,7 +101,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
-                                    <segue destination="TfF-cq-oVp" kind="show" id="N4N-gH-vak"/>
+                                    <segue destination="TfF-cq-oVp" kind="custom" customClass="SegueFromRight" customModule="iQuiz" id="OX8-N2-rNr"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz Topic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XV8-Cz-7Li">
@@ -243,6 +243,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Adj-ji-YdU">
+                                <rect key="frame" x="22" y="617" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="custom" identifier="aToQ" customClass="SegueFromLeft" customModule="iQuiz" id="y6Y-za-RWZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -252,7 +259,9 @@
                             <constraint firstItem="09I-FJ-Lex" firstAttribute="leading" secondItem="ihE-24-FiF" secondAttribute="leadingMargin" id="EEp-yO-5ox"/>
                             <constraint firstItem="DlJ-tJ-C5n" firstAttribute="centerX" secondItem="ihE-24-FiF" secondAttribute="centerX" id="GFw-Ut-cCt"/>
                             <constraint firstItem="09I-FJ-Lex" firstAttribute="trailing" secondItem="ihE-24-FiF" secondAttribute="trailingMargin" id="QvN-ad-xNh"/>
+                            <constraint firstItem="KHq-iG-esZ" firstAttribute="top" secondItem="Adj-ji-YdU" secondAttribute="bottom" constant="20" id="cDo-1c-uGp"/>
                             <constraint firstItem="Pji-9J-MNl" firstAttribute="top" secondItem="TYI-7h-3e8" secondAttribute="bottom" constant="64" id="eAY-gH-cbi"/>
+                            <constraint firstItem="Adj-ji-YdU" firstAttribute="leading" secondItem="ihE-24-FiF" secondAttribute="leadingMargin" constant="6" id="m07-Kf-H2g"/>
                             <constraint firstItem="Pji-9J-MNl" firstAttribute="centerX" secondItem="ihE-24-FiF" secondAttribute="centerX" id="t6S-Wc-Fhj"/>
                         </constraints>
                         <connections>
