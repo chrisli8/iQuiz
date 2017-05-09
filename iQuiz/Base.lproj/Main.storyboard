@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pgD-HS-zBW">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -45,6 +45,7 @@
                                 <connections>
                                     <outlet property="discription" destination="QNi-cz-yEh" id="vBz-sR-eMP"/>
                                     <outlet property="title" destination="YaR-ON-3Ua" id="6X1-tq-Sr7"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="NUk-As-DS0"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -210,7 +211,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="992.79999999999995" y="527.58620689655174"/>
+            <point key="canvasLocation" x="770" y="528"/>
         </scene>
         <!--Answer View Controller-->
         <scene sceneID="fFZ-0c-sl9">
@@ -243,8 +244,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6F-Kj-gXU">
+                                <rect key="frame" x="327" y="617" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="b0D-16-xFM" kind="custom" identifier="toResults" customClass="SegueFromRight" customModule="iQuiz" id="OtQ-Tk-2Eb"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Adj-ji-YdU">
-                                <rect key="frame" x="22" y="617" width="34" height="30"/>
+                                <rect key="frame" x="16" y="617" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="custom" identifier="aToQ" customClass="SegueFromLeft" customModule="iQuiz" id="y6Y-za-RWZ"/>
@@ -259,10 +267,12 @@
                             <constraint firstItem="09I-FJ-Lex" firstAttribute="leading" secondItem="ihE-24-FiF" secondAttribute="leadingMargin" id="EEp-yO-5ox"/>
                             <constraint firstItem="DlJ-tJ-C5n" firstAttribute="centerX" secondItem="ihE-24-FiF" secondAttribute="centerX" id="GFw-Ut-cCt"/>
                             <constraint firstItem="09I-FJ-Lex" firstAttribute="trailing" secondItem="ihE-24-FiF" secondAttribute="trailingMargin" id="QvN-ad-xNh"/>
+                            <constraint firstItem="Adj-ji-YdU" firstAttribute="leading" secondItem="ihE-24-FiF" secondAttribute="leadingMargin" id="Wyh-Mt-3pr"/>
                             <constraint firstItem="KHq-iG-esZ" firstAttribute="top" secondItem="Adj-ji-YdU" secondAttribute="bottom" constant="20" id="cDo-1c-uGp"/>
                             <constraint firstItem="Pji-9J-MNl" firstAttribute="top" secondItem="TYI-7h-3e8" secondAttribute="bottom" constant="64" id="eAY-gH-cbi"/>
-                            <constraint firstItem="Adj-ji-YdU" firstAttribute="leading" secondItem="ihE-24-FiF" secondAttribute="leadingMargin" constant="6" id="m07-Kf-H2g"/>
+                            <constraint firstItem="g6F-Kj-gXU" firstAttribute="trailing" secondItem="ihE-24-FiF" secondAttribute="trailingMargin" id="mLo-LA-aXs"/>
                             <constraint firstItem="Pji-9J-MNl" firstAttribute="centerX" secondItem="ihE-24-FiF" secondAttribute="centerX" id="t6S-Wc-Fhj"/>
+                            <constraint firstItem="KHq-iG-esZ" firstAttribute="top" secondItem="g6F-Kj-gXU" secondAttribute="bottom" constant="20" id="taF-G5-Ygu"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="kte-HQ-GJA" appends="YES" id="FEh-L2-cvt"/>
@@ -282,7 +292,51 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1826" y="528"/>
+            <point key="canvasLocation" x="1574" y="528"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="49S-yd-3wz">
+            <objects>
+                <viewController id="b0D-16-xFM" customClass="ResultViewController" customModule="iQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B6G-Ed-Ck5"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wt6-zW-Iyn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fA3-x4-dOf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You got ... out of 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vk4-Aa-mJH">
+                                <rect key="frame" x="118" y="323" width="138" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACD-kg-f4F">
+                                <rect key="frame" x="110" y="617" width="155" height="30"/>
+                                <state key="normal" title="Back to Quiz Selection"/>
+                                <connections>
+                                    <action selector="onReturnBtnPressed:" destination="b0D-16-xFM" eventType="touchUpInside" id="QvS-SX-dpZ"/>
+                                    <segue destination="1yV-Hd-bKE" kind="unwind" identifier="unwindSegueToVC1" unwindAction="unwindToVC1WithSegue:" id="eUi-Xm-azJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vk4-Aa-mJH" firstAttribute="centerY" secondItem="fA3-x4-dOf" secondAttribute="centerY" id="8e2-GI-V0g"/>
+                            <constraint firstItem="Wt6-zW-Iyn" firstAttribute="top" secondItem="ACD-kg-f4F" secondAttribute="bottom" constant="20" id="TPs-oB-4lD"/>
+                            <constraint firstItem="ACD-kg-f4F" firstAttribute="centerX" secondItem="fA3-x4-dOf" secondAttribute="centerX" id="v1s-iL-msE"/>
+                            <constraint firstItem="vk4-Aa-mJH" firstAttribute="centerX" secondItem="fA3-x4-dOf" secondAttribute="centerX" id="xEo-yo-wSj"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="agc-Wn-JLQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="1yV-Hd-bKE" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2317.5999999999999" y="527.58620689655174"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="NUk-As-DS0"/>
+    </inferredMetricsTieBreakers>
 </document>

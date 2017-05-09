@@ -20,6 +20,7 @@
 		9781A2BB1EC128E300028B2F /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9781A2BA1EC128E300028B2F /* TransitionManager.swift */; };
 		9781A2BD1EC1414500028B2F /* SegueFromLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9781A2BC1EC1414500028B2F /* SegueFromLeft.swift */; };
 		9781A2BF1EC141D900028B2F /* SegueFromRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9781A2BE1EC141D900028B2F /* SegueFromRight.swift */; };
+		9781A2C11EC1792500028B2F /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9781A2C01EC1792500028B2F /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		9781A2BA1EC128E300028B2F /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 		9781A2BC1EC1414500028B2F /* SegueFromLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueFromLeft.swift; sourceTree = "<group>"; };
 		9781A2BE1EC141D900028B2F /* SegueFromRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueFromRight.swift; sourceTree = "<group>"; };
+		9781A2C01EC1792500028B2F /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				9781A2BA1EC128E300028B2F /* TransitionManager.swift */,
 				9781A2BC1EC1414500028B2F /* SegueFromLeft.swift */,
 				9781A2BE1EC141D900028B2F /* SegueFromRight.swift */,
+				9781A2C01EC1792500028B2F /* ResultViewController.swift */,
 			);
 			path = iQuiz;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				9781A2B91EC11F4300028B2F /* AnswerViewController.swift in Sources */,
 				9709DDC71EB82BCF0063D489 /* AppDelegate.swift in Sources */,
 				9709DDF51EB82D5D0063D489 /* QuizTableViewCell.swift in Sources */,
+				9781A2C11EC1792500028B2F /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

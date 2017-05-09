@@ -34,6 +34,7 @@ class AnswerViewController: UIViewController {
             print("swipe right")
             
         } else if sender.direction == UISwipeGestureRecognizerDirection.left {
+            performSegue(withIdentifier: "toResults", sender: nil)
             print("swipe left")
         } else {
             print("not recognized")
