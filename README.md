@@ -4,7 +4,7 @@ Christopher Li, INFO 449, iQuiz Part2
 
 This is a iOS app that allows users to select a topic of their choosing and quiz themselves.
 
-Extra functionality:
+Extra functionality:  
 swipe right to go to next scene  
 swipe left to abandon quiz and return to list  
 
