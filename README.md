@@ -9,7 +9,7 @@ swipe right to go to next scene
 swipe left to abandon quiz and return to list  
 
 
-Basic functionality:
+Basic functionality:  
 
 question scene acts as intended  
 answer scene acts as intended  
