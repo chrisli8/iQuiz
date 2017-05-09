@@ -97,29 +97,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Mu-ol-uuE">
-                                <rect key="frame" x="16" y="605" width="343" height="42"/>
+                                <rect key="frame" x="16" y="561" width="343" height="42"/>
                                 <color key="backgroundColor" red="1" green="0.96430803131914966" blue="0.81034239636151917" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
-                                    <segue destination="TfF-cq-oVp" kind="custom" customClass="SegueFromRight" customModule="iQuiz" id="OX8-N2-rNr"/>
+                                    <segue destination="TfF-cq-oVp" kind="custom" identifier="toAnswer" customClass="SegueFromRight" customModule="iQuiz" id="OX8-N2-rNr"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz Topic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XV8-Cz-7Li">
-                                <rect key="frame" x="147" y="84" width="81" height="21"/>
+                                <rect key="frame" x="147" y="128" width="81" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxW-YD-Dln">
-                                <rect key="frame" x="16" y="120" width="343" height="101.5"/>
+                                <rect key="frame" x="16" y="164" width="343" height="101.5"/>
                                 <string key="text">Question Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus posuere ex turpis, ac blandit lacus tincidunt non. Nullam dapibus tempus laoreet. Interdum et malesuada fames ac ante ipsum primis in faucibus.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gO3-g9-IYr">
-                                <rect key="frame" x="16" y="229.5" width="343" height="30"/>
+                                <rect key="frame" x="16" y="273.5" width="343" height="30"/>
                                 <color key="backgroundColor" red="0.058193182687142499" green="0.59222694731437664" blue="0.90042067307692308" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Answer 1">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -132,7 +132,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G04-tC-7YU">
-                                <rect key="frame" x="16" y="267.5" width="343" height="30"/>
+                                <rect key="frame" x="16" y="311.5" width="343" height="30"/>
                                 <color key="backgroundColor" red="0.058193182689999998" green="0.59222694730000003" blue="0.90042067309999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Answer 2">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -145,7 +145,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRd-he-zQr">
-                                <rect key="frame" x="16" y="305.5" width="343" height="30"/>
+                                <rect key="frame" x="16" y="349.5" width="343" height="30"/>
                                 <color key="backgroundColor" red="0.058193182689999998" green="0.59222694730000003" blue="0.90042067309999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Answer 3">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -158,7 +158,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8OS-8g-iXc">
-                                <rect key="frame" x="16" y="343.5" width="343" height="30"/>
+                                <rect key="frame" x="16" y="387.5" width="343" height="30"/>
                                 <color key="backgroundColor" red="0.058193182689999998" green="0.59222694730000003" blue="0.90042067309999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Answer 4">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -172,6 +172,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="VRd-he-zQr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6Nw-hl-CJA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XV8-Cz-7Li" secondAttribute="trailing" constant="131" id="7gd-uJ-gaU"/>
@@ -201,6 +202,10 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7Mu-ol-uuE" secondAttribute="bottom" constant="20" id="xI4-aP-CY8"/>
                             <constraint firstItem="XV8-Cz-7Li" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z1t-Gj-wYX"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="yp2-LF-NEQ" appends="YES" id="sdU-HQ-eJ8"/>
+                            <outletCollection property="gestureRecognizers" destination="fVZ-cj-egA" appends="YES" id="5HD-MI-f6A"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="Answer1" destination="gO3-g9-IYr" id="BTQ-3E-vgc"/>
@@ -210,6 +215,18 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="Mai-Ee-AU1" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="right" id="yp2-LF-NEQ">
+                    <connections>
+                        <action selector="onSwipe:" destination="BYZ-38-t0r" id="aNX-O8-g72"/>
+                        <segue destination="Mai-Ee-AU1" kind="unwind" identifier="abandonQuizQuestion" unwindAction="unwindToVC1WithSegue:" id="QH0-56-uNj"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="fVZ-cj-egA">
+                    <connections>
+                        <action selector="onSwipe:" destination="BYZ-38-t0r" id="Eto-aH-KRm"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="770" y="528"/>
         </scene>
@@ -281,9 +298,11 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cc1-7D-pSD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="p8L-r5-0rZ" userLabel="Exit" sceneMemberID="exit"/>
                 <swipeGestureRecognizer direction="right" id="kte-HQ-GJA">
                     <connections>
                         <action selector="onSwipeAction:" destination="TfF-cq-oVp" id="FwY-X0-BAi"/>
+                        <segue destination="p8L-r5-0rZ" kind="unwind" identifier="abandonQuizAnswer" unwindAction="unwindToVC1WithSegue:" id="6yp-P4-Tpw"/>
                     </connections>
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="4fJ-NX-poZ">
@@ -320,11 +339,19 @@
                                     <segue destination="1yV-Hd-bKE" kind="unwind" identifier="unwindSegueToVC1" unwindAction="unwindToVC1WithSegue:" id="eUi-Xm-azJ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perfect" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJ9-sy-BhF">
+                                <rect key="frame" x="159" y="294" width="56" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="vk4-Aa-mJH" firstAttribute="top" secondItem="aJ9-sy-BhF" secondAttribute="bottom" constant="8" id="7ns-Or-Dd5"/>
                             <constraint firstItem="vk4-Aa-mJH" firstAttribute="centerY" secondItem="fA3-x4-dOf" secondAttribute="centerY" id="8e2-GI-V0g"/>
                             <constraint firstItem="Wt6-zW-Iyn" firstAttribute="top" secondItem="ACD-kg-f4F" secondAttribute="bottom" constant="20" id="TPs-oB-4lD"/>
+                            <constraint firstItem="aJ9-sy-BhF" firstAttribute="centerX" secondItem="fA3-x4-dOf" secondAttribute="centerX" id="Wp4-dh-i6k"/>
                             <constraint firstItem="ACD-kg-f4F" firstAttribute="centerX" secondItem="fA3-x4-dOf" secondAttribute="centerX" id="v1s-iL-msE"/>
                             <constraint firstItem="vk4-Aa-mJH" firstAttribute="centerX" secondItem="fA3-x4-dOf" secondAttribute="centerX" id="xEo-yo-wSj"/>
                         </constraints>
@@ -337,6 +364,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="NUk-As-DS0"/>
+        <segue reference="y6Y-za-RWZ"/>
     </inferredMetricsTieBreakers>
 </document>

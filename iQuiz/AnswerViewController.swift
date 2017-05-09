@@ -30,7 +30,7 @@ class AnswerViewController: UIViewController {
 //            let vc = self.storyboard?.instantiateViewController(withIdentifier: "questionVCid") as! QuestionViewController
 //            vc.transitioningDelegate = self.transitionManager
 //            self.present(vc, animated: true, completion: nil)
-            performSegue(withIdentifier: "aToQ", sender: nil)
+            performSegue(withIdentifier: "abandonQuizAnswer", sender: nil)
             print("swipe right")
             
         } else if sender.direction == UISwipeGestureRecognizerDirection.left {

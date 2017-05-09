@@ -36,15 +36,15 @@ class QuestionViewController: UIViewController {
         self.selectedAnswer = sender
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        // this gets a reference to the screen that we're about to transition to
-        let toViewController = segue.destination as UIViewController
-        
-        // instead of using the default transition animation, we'll ask
-        // the segue to use our custom TransitionManager object to manage the transition animation
-        toViewController.transitioningDelegate = self.transitionManager
-        
+    @IBAction func onSwipe(_ sender: UISwipeGestureRecognizer) {
+        if sender.direction == UISwipeGestureRecognizerDirection.right {
+            performSegue(withIdentifier: "abandonQuizQuestion", sender: nil)
+            print("swipe right")
+            
+        } else if sender.direction == UISwipeGestureRecognizerDirection.left {
+            performSegue(withIdentifier: "toAnswer", sender: nil)
+            print("swipe left")
+        }
     }
 
 }
