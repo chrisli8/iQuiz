@@ -18,6 +18,10 @@
 		9709DDF71EB8311B0063D489 /* QuizTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9709DDF61EB8311B0063D489 /* QuizTableViewController.swift */; };
 		974B0CA21ECAA8E400490C36 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 974B0C951ECAA8B600490C36 /* Alamofire.framework */; };
 		974B0CA31ECAA8E400490C36 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 974B0C951ECAA8B600490C36 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		974B0CA71ECAAA0E00490C36 /* SubjectObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974B0CA61ECAAA0E00490C36 /* SubjectObject.swift */; };
+		974B0CA91ECAAEA500490C36 /* QuestionObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974B0CA81ECAAEA500490C36 /* QuestionObject.swift */; };
+		974B0CAC1ECB776800490C36 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 974B0CAB1ECB776800490C36 /* libsqlite3.tbd */; };
+		974B0CAE1ECB7DC500490C36 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974B0CAD1ECB7DC500490C36 /* AppData.swift */; };
 		9781A2B91EC11F4300028B2F /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9781A2B81EC11F4300028B2F /* AnswerViewController.swift */; };
 		9781A2BB1EC128E300028B2F /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9781A2BA1EC128E300028B2F /* TransitionManager.swift */; };
 		9781A2BD1EC1414500028B2F /* SegueFromLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9781A2BC1EC1414500028B2F /* SegueFromLeft.swift */; };
@@ -129,6 +133,10 @@
 		9709DDF41EB82D5D0063D489 /* QuizTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizTableViewCell.swift; sourceTree = "<group>"; };
 		9709DDF61EB8311B0063D489 /* QuizTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizTableViewController.swift; sourceTree = "<group>"; };
 		974B0C891ECAA8B600490C36 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		974B0CA61ECAAA0E00490C36 /* SubjectObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectObject.swift; sourceTree = "<group>"; };
+		974B0CA81ECAAEA500490C36 /* QuestionObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionObject.swift; sourceTree = "<group>"; };
+		974B0CAB1ECB776800490C36 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		974B0CAD1ECB7DC500490C36 /* AppData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		9781A2B81EC11F4300028B2F /* AnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 		9781A2BA1EC128E300028B2F /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 		9781A2BC1EC1414500028B2F /* SegueFromLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueFromLeft.swift; sourceTree = "<group>"; };
@@ -141,6 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				974B0CAC1ECB776800490C36 /* libsqlite3.tbd in Frameworks */,
 				974B0CA21ECAA8E400490C36 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -170,6 +179,7 @@
 				9709DDE51EB82BCF0063D489 /* iQuizUITests */,
 				9709DDC41EB82BCF0063D489 /* Products */,
 				974B0C891ECAA8B600490C36 /* Alamofire.xcodeproj */,
+				974B0CAA1ECB776800490C36 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -199,6 +209,9 @@
 				9781A2BC1EC1414500028B2F /* SegueFromLeft.swift */,
 				9781A2BE1EC141D900028B2F /* SegueFromRight.swift */,
 				9781A2C01EC1792500028B2F /* ResultViewController.swift */,
+				974B0CA61ECAAA0E00490C36 /* SubjectObject.swift */,
+				974B0CA81ECAAEA500490C36 /* QuestionObject.swift */,
+				974B0CAD1ECB7DC500490C36 /* AppData.swift */,
 			);
 			path = iQuiz;
 			sourceTree = "<group>";
@@ -233,6 +246,14 @@
 				974B0CA11ECAA8B600490C36 /* Alamofire.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		974B0CAA1ECB776800490C36 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				974B0CAB1ECB776800490C36 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,14 +451,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				9781A2BB1EC128E300028B2F /* TransitionManager.swift in Sources */,
+				974B0CA71ECAAA0E00490C36 /* SubjectObject.swift in Sources */,
 				9709DDF71EB8311B0063D489 /* QuizTableViewController.swift in Sources */,
 				9781A2BF1EC141D900028B2F /* SegueFromRight.swift in Sources */,
 				9781A2BD1EC1414500028B2F /* SegueFromLeft.swift in Sources */,
 				9709DDC91EB82BCF0063D489 /* QuestionViewController.swift in Sources */,
+				974B0CA91ECAAEA500490C36 /* QuestionObject.swift in Sources */,
 				9781A2B91EC11F4300028B2F /* AnswerViewController.swift in Sources */,
 				9709DDC71EB82BCF0063D489 /* AppDelegate.swift in Sources */,
 				9709DDF51EB82D5D0063D489 /* QuizTableViewCell.swift in Sources */,
 				9781A2C11EC1792500028B2F /* ResultViewController.swift in Sources */,
+				974B0CAE1ECB7DC500490C36 /* AppData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,6 +14,8 @@ class QuizTableViewController: UITableViewController {
     var topics = ["Mathematics", "Marvel Super Heroes", "Science"]
     var descriptions = ["A topic about Math","A topic about heroes","A topic about Science"]
     var images = ["40-TableCellMathematics", "40-TableCellHeros", "40-TableCellScience"]
+    
+    var topicList: [SubjectObject] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +25,33 @@ class QuizTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        let url = URL(string: "https://tednewardsandbox.site44.com/questions.json")
+        
+        // Builds up model. Should be put in Model side of program
+        Alamofire.request(url!).responseJSON{ response in
+            debugPrint(response)
+            
+            if let json = response.result.value as? [[String:Any]]{
+                for index in 0...json.count - 1{
+                    let topic = json[index]["title"] as! String
+                    let desc = json[index]["desc"] as! String
+                    let subject = SubjectObject(title: topic, desc: desc)
+                    
+                    let questionJson = json[index]["questions"] as! [[String:Any]]
+                    for number in 0...questionJson.count - 1 {
+                        let text = questionJson[number]["text"] as! String
+                        let answers = questionJson[number]["answers"] as! [String]
+                        let answer = Int(questionJson[number]["answer"] as! String)
+                        subject.questions.append(QuestionObject(question: text, answers: answers, answerIndex: answer!))
+                    }
+                    self.topicList.append(subject)
+                }
+            }
+            AppData.shared.topicList = self.topicList
+            self.tableView.reloadData()
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,7 +68,7 @@ class QuizTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.topics.count
+        return self.topicList.count
     }
 
     
@@ -47,8 +76,8 @@ class QuizTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "quizCell", for: indexPath) as! QuizTableViewCell
 
         // Configure the cell...
-        cell.title.text = self.topics[indexPath.row]
-        cell.discription.text = self.descriptions[indexPath.row]
+        cell.title.text = self.topicList[indexPath.row].title
+        cell.discription.text = self.topicList[indexPath.row].desc
         cell.imageView?.image = UIImage(named: self.images[indexPath.row])
 
         return cell
@@ -71,6 +100,11 @@ class QuizTableViewController: UITableViewController {
             // ...
         }
         
+    }
+    
+    // when row is selected
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        AppData.shared.selectedTopic = AppData.shared.topicList[indexPath.row]
     }
     
     @IBAction func unwindToVC1(segue:UIStoryboardSegue) {

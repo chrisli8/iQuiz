@@ -9,16 +9,20 @@
 import UIKit
 
 class QuestionViewController: UIViewController {
-    @IBOutlet weak var Answer1: UIButton!
-    @IBOutlet weak var Answer2: UIButton!
-    @IBOutlet weak var Answer3: UIButton!
-    @IBOutlet weak var Answer4: UIButton!
+    @IBOutlet weak var topicTitle: UILabel!
+    @IBOutlet weak var questionText: UILabel!
+    @IBOutlet weak var answer1: UIButton!
+    @IBOutlet weak var answer2: UIButton!
+    @IBOutlet weak var answer3: UIButton!
+    @IBOutlet weak var answer4: UIButton!
     var selectedAnswer: UIButton!
     
     let transitionManager = TransitionManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        topicTitle.text = AppData.shared.selectedTopic?.title
+        questionText.text = AppData.shared.selectedTopic?.questions[0].question
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -28,10 +32,10 @@ class QuestionViewController: UIViewController {
     }
 
     @IBAction func onAnswerButtonPressed(_ sender: UIButton) {
-        Answer1.isSelected = false
-        Answer2.isSelected = false
-        Answer3.isSelected = false
-        Answer4.isSelected = false
+        answer1.isSelected = false
+        answer2.isSelected = false
+        answer3.isSelected = false
+        answer4.isSelected = false
         sender.isSelected = !sender.isSelected
         self.selectedAnswer = sender
     }
