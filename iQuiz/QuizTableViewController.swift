@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class QuizTableViewController: UITableViewController {
     // Mathematics, Marvel Super Heroes, and Science
