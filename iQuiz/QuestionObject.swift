@@ -12,6 +12,7 @@ class QuestionObject: NSObject {
     var question: String
     var answers: [String]
     var answerIndex = 0
+    var answeredCorrect = false
     
     init(question: String, answers: [String], answerIndex: Int) {
         self.question = question

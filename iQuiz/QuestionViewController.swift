@@ -17,12 +17,23 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var answer4: UIButton!
     var selectedAnswer: UIButton!
     
+    var selectedTopic: SubjectObject? // Should this be just local
+    var currentQuestion: QuestionObject?
+    var questionNum: Int = 0
+    
     let transitionManager = TransitionManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        topicTitle.text = AppData.shared.selectedTopic?.title
-        questionText.text = AppData.shared.selectedTopic?.questions[0].question
+        self.selectedTopic = AppData.shared.selectedTopic
+        self.questionNum = AppData.shared.questionNum
+        self.currentQuestion = selectedTopic?.questions[questionNum]
+        topicTitle.text = selectedTopic?.title
+        questionText.text = currentQuestion?.question
+        answer1.setTitle(currentQuestion?.answers[0], for: .normal)
+        answer2.setTitle(currentQuestion?.answers[1], for: .normal)
+        answer3.setTitle(currentQuestion?.answers[2], for: .normal)
+        answer4.setTitle(currentQuestion?.answers[3], for: .normal)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -48,6 +59,12 @@ class QuestionViewController: UIViewController {
         } else if sender.direction == UISwipeGestureRecognizerDirection.left {
             performSegue(withIdentifier: "toAnswer", sender: nil)
             print("swipe left")
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (selectedAnswer.titleLabel?.text)! == currentQuestion?.answers[(currentQuestion?.answerIndex)! - 1] { //in json 1 refers to first element in array
+            AppData.shared.selectedTopic?.questions[questionNum].answeredCorrect = true
         }
     }
 

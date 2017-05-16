@@ -14,6 +14,7 @@ class AppData: NSObject {
     
     var topicList: [SubjectObject] = []
     var selectedTopic: SubjectObject?
+    var questionNum = 0
     
     override init(){
         super.init()

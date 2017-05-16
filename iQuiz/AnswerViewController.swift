@@ -9,13 +9,20 @@
 import UIKit
 
 class AnswerViewController: UIViewController {
+    @IBOutlet weak var answerLabel: UILabel!
+    
+    var currentQuestion: QuestionObject?
     
     let transitionManager = TransitionManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.currentQuestion = AppData.shared.selectedTopic?.questions[AppData.shared.questionNum]
+        if currentQuestion?.answeredCorrect == true {
+            answerLabel.text = "Correct!"
+        } else {
+            answerLabel.text = "Wrong :("
+        }
     }
 
     override func didReceiveMemoryWarning() {
